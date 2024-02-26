@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Document</title>
-  </head>
-  <body>
-    <h1>Mi TODO list</h1>
-    <script src="scripts/script.js"></script>
-  </body>
+</head>
+<body>
+<div class="container">
+    <img src="images/486496315a738b66133d67fd5a6f2daf.jpg" class="side-image" alt="Left Image">
+    <div class="Titulo">
+        <h1>Mi TO-DO list</h1>
+    </div>
+    <div class="task-controls">
+        <input type="text" id="taskInput" placeholder="Agregar nueva tarea">
+        <button onclick="addTask()">Agregar</button>
+        <button id="deleteButton" onclick="deleteAllTasks()">Eliminar Todas</button>
+    </div>
+    <ul id="taskList">
+        <!-- Aquí se agregarán dinámicamente las tareas -->
+    </ul>
+    <img src="images/c48d6e6f76739158e97ea5533cf6f748.jpg" class="side-image" alt="Right Image">
+</div>
+<script src="scripts/script.js"></script>
+</body>
 </html>
