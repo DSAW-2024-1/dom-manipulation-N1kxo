@@ -3,3 +3,147 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(57, 54, 54);
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.Titulo {
+    width: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.task-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre los botones */
+    margin-bottom: 20px;
+}
+
+.side-image {
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.icon-trash {
+    width: 20px; /* Tamaño deseado de la imagen */
+    height: auto; /* Para mantener la proporción de aspecto */
+}
+
+/* Tu CSS existente */
+
+
+.side-image:first-child {
+    left: 0;
+}
+
+.side-image:last-child {
+    right: 0;
+}
+
+#taskInput {
+    flex: 1;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+button {
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#deleteButton {
+    background-color: hsla(360, 100%, 60%, 1);
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    color: white;
+}
+
+.task {
+    margin-bottom: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+    appearance: none;
+    outline: none;
+}
+
+input[type="checkbox"]:checked {
+    background-color:white;
+}
+
+@media only screen and (max-width: 767px) {
+    /* Estilos para dispositivos móviles */
+    .side-image {
+        display: none; /* Ocultar las imágenes en dispositivos móviles */
+    }
+
+    .Titulo {
+        text-align: center; /* Centrar el título en dispositivos móviles */
+    }
+
+    .task-controls {
+        flex-direction: column; /* Cambiar la dirección de los controles en dispositivos móviles */
+        align-items: center; /* Alinear los controles al centro */
+    }
+
+    #taskInput {
+        width: 100%; /* Ancho completo para el input en dispositivos móviles */
+        margin-bottom: 10px; /* Añadir espacio debajo del input en dispositivos móviles */
+    }
+
+    button {
+        width: 100%; /* Ancho completo para los botones en dispositivos móviles */
+    }
+
+    ul {
+        width: 100%; /* Ancho completo para la lista de tareas en dispositivos móviles */
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para tabletas */
+    .side-image {
+        display: none; /* Ocultar las imágenes en tabletas */
+    }
+
+    .container {
+        max-width: 800px; /* Ajustar el ancho máximo para tabletas */
+    }
+
+    .Titulo {
+        text-align: center; /* Centrar el título en tabletas */
+    }
+}
